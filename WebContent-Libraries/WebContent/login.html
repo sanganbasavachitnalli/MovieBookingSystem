@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+function validateForm() {
+  var x = document.forms["myForm"]["username"].value;
+  var y=  document.forms["myForm"]["password"].value;
+  if (x == "" ) {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (y == "" ) {
+	    alert("Password must be filled out");
+	    return false;
+	  }
+}
+</script>
+<body>
+    <div class="loginbox">
+    <img src="images/avatar.png" class="avatar" alt="no photo">
+        <h1>Login Here</h1>
+        <form action="login.jsp" method="post"  name="myForm" onsubmit="return validateForm()" >
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit"  value="Login" >
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+ 
+    </div>
+
+</body>
+</head>
+</html>
